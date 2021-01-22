@@ -1,0 +1,20 @@
+goto_homework_tab:
+  - by: xpath
+    locator: '//div[@id = "third-nav"]/a[text() = "作业"]'
+    action: click
+
+  - by: xpath
+    locator: '//a[text() = "仅限测试使用！！！"]'
+    action: click
+
+
+goto_private_letter:
+  - by: xpath
+    locator: '//div[@id = "third-nav"]/a[text() = "作业"]'
+    action: click
+
+  - by: xpath
+    locator: '//div[@class = "privateLetter"]/a'
+    action: click
+
+  - action: switch_to_window

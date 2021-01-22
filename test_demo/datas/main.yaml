@@ -1,0 +1,4 @@
+goto_login:
+  - by: xpath
+    locator: '//a[text() = "登录"]'
+    action: click

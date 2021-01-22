@@ -1,0 +1,59 @@
+add_homework:
+
+#  - visible: (By.CSS_SELECTOR,'.homework-box')
+#    time: 20
+#    action: visibility_ele
+
+#  - by: xpath
+#    locator: '//input[@name = "file"]'
+#    text: /Users/huihuilina/desktop/测试apk/touchaction.apk
+#    action: send_key
+
+
+  - time: 1
+    action: time_sleep
+
+
+  - click_ele:  (By.XPATH,'//a[text()="更新提交" and @class = "new-tj1"]')
+    time: 10
+    action: click_able
+
+  - by: xpath
+    locator: '//a[text()="更新提交" and @class = "new-tj1"]'
+    action: click
+
+  - time: 1
+    action: time_sleep
+
+  - by: xpath
+    locator: '//div[@id = "update-pop"]//a[text() = "确定"]'
+    action: click
+
+
+  - by: xpath
+    locator: '//span[@class = "s2"]'
+    action: click
+
+#  - time: 1
+#    action: time_sleep
+
+  - by: xpath
+    locator: '//textarea[@id = "comment"]'
+    text: test
+    action: send_key
+
+  - by: xpath
+    locator: '//a[text() = "保存"]'
+    action: click
+
+  - by: xpath
+    locator: '//a[text()="更新提交" and @class = "new-tj2 active"]'
+    action: click
+
+#add_successful:
+  - time: 1
+    action: time_sleep
+
+  - visible: (By.XPATH,'//div[text()="作业提交成功"]')
+    time: 10
+    action: visibility_ele

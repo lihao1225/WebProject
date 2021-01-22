@@ -1,0 +1,42 @@
+goto_detail:
+  - by: xpath
+    locator: '//a[text() = "python-web项目实战- 考核项目"]'
+    action: click
+
+
+drop_class:
+  - by: xpath
+    locator: '//p[text()=" 加课码：P69UVV"] /../a/span'
+    action: click
+
+  - by: xpath
+    locator: '//p[text()=" 加课码：P69UVV"] /..//a[text()="退课"]'
+    action: click
+
+  - by: xpath
+    locator: '//div[@class = "deletekccon"]/input'
+    text: lh969900918
+    action: send_key
+
+  - by: xpath
+    locator: '//div[@class="deletekt"]//a[text() ="退课"]'
+    action: click
+
+
+add_class:
+  - by: xpath
+    locator: '//div[contains(text() ," 加入课程")]'
+    action: click
+
+  - by: xpath
+    locator: '//div[text() ="加入课程"]/../div/input'
+    text: P69UVV
+    action: send_key
+
+  - click_ele: (By.XPATH,'//a[text() ="加入"]')
+    time: 10
+    action: click_able
+
+  - by: xpath
+    locator: '//a[text() ="加入"]'
+    action: click

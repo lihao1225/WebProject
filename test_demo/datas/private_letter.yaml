@@ -1,0 +1,14 @@
+send_message:
+  - by: xpath
+    locator: '//textarea[@class = "ps-container"]'
+    text: test
+    action: send_key
+
+  - click_ele: (By.XPATH,'//a[text() = "发送"]')
+    time: 10
+    action: click_able
+
+#  - by: xpath
+#    locator: '//a[text() = "发送"]'
+#    action: click
+  - action: enter
